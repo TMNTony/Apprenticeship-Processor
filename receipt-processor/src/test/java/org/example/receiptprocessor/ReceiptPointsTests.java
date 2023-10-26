@@ -19,28 +19,6 @@ public class ReceiptPointsTests {
     }
 
     @Test
-    public void date_divisible_by_2() {
-//        Arrange
-        receipt.setPurchaseDate("2023-01-06");
-//        Act
-        int points = receipt.getPointsByDate();
-//        Assert
-        Assert.assertEquals(0, points);
-
-    }
-
-    @Test
-    public void date_not_divisible_by_2() {
-//        Arrange
-        receipt.setPurchaseDate("2023-01-05");
-//        Act
-        int points = receipt.getPointsByDate();
-//        Assert
-        Assert.assertEquals(6, points);
-
-    }
-
-    @Test
     public void short_name() {
 //        Arrange
         receipt.setRetailer("HBO");
@@ -186,5 +164,70 @@ public class ReceiptPointsTests {
         int points = receipt.getPointsByDescription();
 //        Assert
         Assert.assertEquals(1, points);
+    }
+
+    @Test
+    public void date_divisible_by_2() {
+//        Arrange
+        receipt.setPurchaseDate("2023-01-06");
+//        Act
+        int points = receipt.getPointsByDate();
+//        Assert
+        Assert.assertEquals(0, points);
+
+    }
+
+    @Test
+    public void date_not_divisible_by_2() {
+//        Arrange
+        receipt.setPurchaseDate("2023-01-05");
+//        Act
+        int points = receipt.getPointsByDate();
+//        Assert
+        Assert.assertEquals(6, points);
+
+    }
+
+    @Test
+    public void before_2() {
+//        Arrange
+        receipt.setPurchaseTime("11:00");
+//        Act
+        int points = receipt.getPointsByTime();
+//        Assert
+        Assert.assertEquals(0, points);
+
+    }
+
+    @Test
+    public void after_4() {
+//        Arrange
+        receipt.setPurchaseTime("16:00");
+//        Act
+        int points = receipt.getPointsByTime();
+//        Assert
+        Assert.assertEquals(0, points);
+
+    }
+
+    @Test
+    public void between_2_4() {
+//        Arrange
+        receipt.setPurchaseTime("15:00");
+//        Act
+        int points = receipt.getPointsByTime();
+//        Assert
+        Assert.assertEquals(10, points);
+
+    }
+    @Test
+    public void at_2() {
+//        Arrange
+        receipt.setPurchaseTime("14:00");
+//        Act
+        int points = receipt.getPointsByTime();
+//        Assert
+        Assert.assertEquals(0, points);
+
     }
 }
