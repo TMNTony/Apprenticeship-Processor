@@ -2,12 +2,23 @@ package org.example.receiptprocessor.models;
 
 import java.time.LocalTime;
 import java.util.List;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 public class Receipt {
+    @NotEmpty
     private String retailer;
+
+    @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}")
     private String purchaseDate;
+
+    @Pattern(regexp = "\\d{2}:\\d{2}")
     private String purchaseTime;
+
+    @NotNull
     private List<Item> items;
+
     private double total;
 
     //     Constructors

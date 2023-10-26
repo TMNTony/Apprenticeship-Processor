@@ -1,12 +1,17 @@
 package org.example.receiptprocessor.controller;
+
 import org.example.receiptprocessor.dao.ReceiptsDao;
 import org.example.receiptprocessor.models.PointsDto;
 import org.example.receiptprocessor.models.Receipt;
 import org.example.receiptprocessor.models.ReceiptIdDto;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
+
 
 @RestController
 @RequestMapping("/receipts")
@@ -21,18 +26,26 @@ public class ReceiptController {
     //    Receives the JSON and converts different strings to other file types
 //    Returns ID
     @RequestMapping(path = "/process", method = RequestMethod.POST)
-    public ReceiptIdDto processReceipts(@RequestBody Receipt receipt) {
-        UUID id = UUID.randomUUID();
-        receiptsDao.saveReceipt(id, receipt);
-        return new ReceiptIdDto(id);
+    public ResponseEntity<?> processReceipts(@Valid @RequestBody Receipt receipt) {
+        try {
+            UUID id = UUID.randomUUID();
+            receiptsDao.saveReceipt(id, receipt);
+            return ResponseEntity.ok(new ReceiptIdDto(id));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Unable to process receipt");
+        }
     }
 
     // Uses key/value pair with the id/corresponding receipt and returns point value
     @RequestMapping(path = "/{id}/points", method = RequestMethod.GET)
-    public PointsDto getPoints(@PathVariable UUID id) {
-        Receipt requestedReceipt = receiptsDao.getReceiptById(id);
-        int points = requestedReceipt.getPoints();
-        return new PointsDto(points);
+    public ResponseEntity<?> getPoints(@PathVariable UUID id) {
+        try {
+            Receipt requestedReceipt = receiptsDao.getReceiptById(id);
+            int points = requestedReceipt.getPoints();
+            return ResponseEntity.ok(new PointsDto(points));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid ID");
+        }
     }
 
     @RequestMapping(path = "/test", method = RequestMethod.GET)
