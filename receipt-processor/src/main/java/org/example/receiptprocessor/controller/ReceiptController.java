@@ -38,19 +38,32 @@ public class ReceiptController {
 
     // Uses key/value pair with the id/corresponding receipt and returns point value
     @RequestMapping(path = "/{id}/points", method = RequestMethod.GET)
-    public ResponseEntity<?> getPoints(@PathVariable UUID id) {
+    public ResponseEntity<?> getPoints(@PathVariable String id) {
         try {
-            Receipt requestedReceipt = receiptsDao.getReceiptById(id);
+            if (!isValidUUID(id)) {
+                return ResponseEntity.notFound().build();
+            }
+            UUID uuid = UUID.fromString(id);
+            Receipt requestedReceipt = receiptsDao.getReceiptById(uuid);
             int points = requestedReceipt.getPoints();
             return ResponseEntity.ok(new PointsDto(points));
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid ID");
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
         }
     }
 
     @RequestMapping(path = "/test", method = RequestMethod.GET)
     public ResponseEntity<String> test(@RequestParam String test) {
         return ResponseEntity.ok("Complete");
+    }
+
+    private boolean isValidUUID(String input) {
+        try {
+            UUID.fromString(input);
+            return true;
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
     }
 }
 
