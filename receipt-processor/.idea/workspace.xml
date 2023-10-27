@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f719a798-6fc3-45e9-bb2b-0ec2a006a28c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/ReceiptProcessorApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/controller/ReceiptController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/dao/MemoryReceiptsDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/dao/ReceiptsDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/models/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/models/PointsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/models/Receipt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/receiptprocessor/models/ReceiptIdDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/receiptprocessor/ReceiptControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/receiptprocessor/ReceiptPointsTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XHAOlk1UYyqqOMmMAUFvmINRJo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "6a2b56635078acf30c0c687f063ddfe4",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tony\Documents\Coding\" />
+      <recent name="C:\Users\Tony\Documents\Coding" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ReceiptProcessorApplication">
+    <configuration name="ReceiptControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="receipt-processor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.receiptprocessor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.receiptprocessor" />
+      <option name="MAIN_CLASS_NAME" value="org.example.receiptprocessor.ReceiptControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceiptControllerTest.get_points" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="receipt-processor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.receiptprocessor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.receiptprocessor" />
+      <option name="MAIN_CLASS_NAME" value="org.example.receiptprocessor.ReceiptControllerTest" />
+      <option name="METHOD_NAME" value="get_points" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example.receiptprocessor in receipt-processor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="receipt-processor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.receiptprocessor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.receiptprocessor" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="receiptprocessor in receipt-processor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="receipt-processor" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/org/example/receiptprocessor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReceiptProcessorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="receipt-processor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.receiptprocessor.ReceiptProcessorApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.receiptprocessor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ReceiptProcessorApplication" />
+        <item itemvalue="JUnit.receiptprocessor in receipt-processor" />
+        <item itemvalue="JUnit.org.example.receiptprocessor in receipt-processor" />
+        <item itemvalue="JUnit.ReceiptControllerTest" />
+        <item itemvalue="JUnit.ReceiptControllerTest.get_points" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f719a798-6fc3-45e9-bb2b-0ec2a006a28c" name="Changes" comment="" />
+      <created>1698275604369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698275604369</updated>
+      <workItem from="1698275605374" duration="12455000" />
+      <workItem from="1698358875406" duration="8046000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

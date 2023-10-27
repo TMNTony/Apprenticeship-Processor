@@ -12,5 +12,5 @@ public interface ReceiptsDao {
 
     void saveReceipt(UUID id, Receipt receipt);
 
-    void setReceipts();
+    boolean isValidUuid(String input);
 }

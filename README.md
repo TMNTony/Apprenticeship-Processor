@@ -2,15 +2,18 @@
 
 ## Running Application
 
-This API was created in java.  The application has been placed in a docker container and can be run using the following commands:
+This API was created in java.  The application can be placed in a docker container and can be run using the following commands:
 ### Building the Docker Image
+Clone the provided gitHub repository.\
 Open a terminal/command prompt and navigate to the project directory.\
+Ensure that docker is installed and running.\
 Run the following command:\
-docker build -t receiptsapi .
+docker build --tag java-receipt-processor .
 
 ### Running the Docker Container
 After building the Docker image, you can run a container using the following command:\
-docker run -d -p 8080:8080 receiptsapi
+docker run --publish 8080:8080 java-receipt-processor\
+The API should now be accessible on port 8080.
 
 
 ---

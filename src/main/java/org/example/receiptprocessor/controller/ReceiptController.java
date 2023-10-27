@@ -6,7 +6,6 @@ import org.example.receiptprocessor.models.Receipt;
 import org.example.receiptprocessor.models.ReceiptIdDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -24,7 +23,7 @@ public class ReceiptController {
     }
 
     //    Receives the JSON and converts different strings to other file types
-//    Returns ID
+    //    Returns ID
     @RequestMapping(path = "/process", method = RequestMethod.POST)
     public ResponseEntity<?> processReceipts(@Valid @RequestBody Receipt receipt) {
         try {
@@ -40,7 +39,7 @@ public class ReceiptController {
     @RequestMapping(path = "/{id}/points", method = RequestMethod.GET)
     public ResponseEntity<?> getPoints(@PathVariable String id) {
         try {
-            if (!isValidUUID(id)) {
+            if (!receiptsDao.isValidUuid(id)) {
                 return ResponseEntity.notFound().build();
             }
             UUID uuid = UUID.fromString(id);
@@ -57,13 +56,5 @@ public class ReceiptController {
         return ResponseEntity.ok("Complete");
     }
 
-    private boolean isValidUUID(String input) {
-        try {
-            UUID.fromString(input);
-            return true;
-        } catch (IllegalArgumentException e) {
-            return false;
-        }
-    }
 }
 
